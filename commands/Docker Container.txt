@@ -1,0 +1,112 @@
+RUN OR CREATE DOCKER CONTAINER
+==============================
+~ docker container create -it -d --name mycontainer -p 80:8080 httpd   (only create the container but not start that)
+~ docker container run -it -d --name mycontainer -p 80:8080 ubuntu     (creates the container and start the same also)
+
+   -it ==> Interactive mode
+   -d  ==> Detached mode
+   -p  ==> Port mapping
+
+
+ 
+LIST RUNNING CONTAINERS
+=======================
+~ docker container ps
+~ docker container ls
+
+ 
+LIST ALL CONTAINERS RUNNING OR STOPPED OR EXITED 
+================================================
+~ docker container ps -a
+~ docker container ls -a
+ 
+
+LIST DOCKER CONTAINER LATEST CREATED
+===================================
+~ docker container ls -l
+~ docker contaoner ls -al
+
+
+DISPLAY SHORT CONTAINER ID
+==========================
+~ docker container ls -q
+~ docker container ls -aq
+
+
+SSH INTO CONTAINER
+==================
+~ docker container exec -it <container_id OR container_name> bash
+ 
+
+STOP START AND RESTART CONTAINER
+================================
+~ docker container stop <container_id OR container_name>
+~ docker container start <container_id OR container_name>
+~ docker container restart <container_id OR container_name>
+
+
+PAUSE AND UNPAUSE CONTAINER
+===========================
+~ docker container pause <container_id OR container_name>
+~ docker container unpause <container_id OR container_name>
+
+
+REMOVE OR TERMINATE CONTAINER
+=============================
+~ docker container rm <container_id OR container_name>  (You can't remove a running container you need to stop that first)
+~ docker container rm -vf $(docker ps -a -q)
+~ docker container prune (remove all containers which are not running)
+
+
+RUN CONTAINER IN DETTACHED MODE AND THEN ATTACH AGAIN
+======================================================
+~ docker container run -it -d --name mycontainer ubuntu
+~ docker container attach <container_id OR container_name>
+
+
+INSPECT CONTAINER
+=================
+~ docker container inspect <container_id OR container_name>
+
+
+SEE CONTAINERS STATICTICS
+=========================
+~ docker container stats
+~ docker container top <container_id OR container_name>
+~ docker container logs <container_id OR container_name>
+~ docker container logs -f <container_id OR container_name>
+  -f stream the logs live
+~ docker system events --since 60m
+
+
+SET HOSTNAME FOR CONTAINER
+==========================
+Default short container id would be the hostname of container but if you want to set custom hostname then use below command.
+~ docker container run -it -d --name=mycontainer --hostname=webapp httpd
+
+
+CONTAINER RESTART POLICY
+========================
+~ docker container run --restart=no ubuntu
+~ docker container run --restart=on-failure ubuntu
+~ docker container run --restart=always ubuntu
+~ docker container run --restart=unless-stopped ubuntu
+
+
+FILE OR DIRECTORY COPY FROM HOST TO CONTAINER AND FROM CONTAINER TO HOST
+========================================================================
+~ docker container cp /tmp/web.conf webapp:/etc/web.conf
+~ docker container cp webapp:/root/dockerhost /tmp/
+~ docker container cp /tmp/web.conf webapp:/etc/
+~ docker container cp /tmp/app/ webapp:/opt/app
+
+
+
+
+
+
+~ docker container run -itd --name=mycontainer --rm ubuntu   
+(This is will create container but gets terminated when it stop using docker container stop command)
+
+
+~ docker container run -d --log-driver json-file nginx

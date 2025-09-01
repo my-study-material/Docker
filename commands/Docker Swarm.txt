@@ -1,0 +1,77 @@
+DOCKER SWARM SETUP
+==================
+ ~ docker swarm init
+ ~ docker node ls
+ ~ docker swarm join-token worker
+ ~ docker swarm join-token manager
+ ~ docker swarm join <token_id>
+ ~ docker swarm leave
+ ~ docker swarm leave --force
+ ~ docker node rm <node_id>
+ 
+
+DOCKER SWARM SERVICE
+====================
+ ~ docker service create --name fun-service --replicas 3 -p 80:80 httpd
+ ~ docker service create --replicas=5 web
+ ~ docker service create --mode=global web
+ ~ docker service create --mode=replicated --replicas=2 webapp
+ ~ docker service scale webapp=4
+ ~ docker service ls
+ ~ docker service ps <service_name>
+ ~ docker service inspect <service_name> --pretty
+ ~ docker service logs <service_name>
+ ~ docker service update -p 80:80 --image mysql:latest <service_name or id> 
+ ~ docker service update -p 80:80 --update-delay 60s --image mysql:latest <service_name or id>
+ ~ docker service update -p 80:80 --update-parallelism 3 --image mysql:latest <service_name or id>
+ ~ docker service update -p 80:80 --update-failure-action pause|continue|rollback --image mysql:latest <service_name or id>
+ ~ docker service update --rollback <service_name or id>
+ ~ docker service rm <service_name>
+ 
+
+DOCKER SWARM STACK
+==================
+ ~ docker stack deploy -c docker-compose.yml fun
+ ~ docker service scale fun_wordpress=3 
+ ~ docker stack services fun
+ ~ docker stack ps
+ ~ docker stack ls
+ ~ docker stack services
+ ~ docker stack rm <stack_name>
+ ~ cat docker-compose.yml | docker stack deploy --compose-file - STACKDEMO
+ 
+
+DOCKER SWARM NODE
+=================
+ ~ docker node ls
+ ~ docker node update --availability drain <node_id>
+ ~ docker node update --availability active <node_id>
+ ~ docker node promote <worker_node_id>
+ ~ docker node demote <manager_node_id>
+ 
+
+DOCKER LOCK
+===========
+ ~ docker swarm init --autolock=true
+ ~ docker swarm update --autolock=true
+ ~ docker swarm unlock
+ 
+
+LABALES AND CONTRAINTS
+======================
+ ~ docker node update --label-add type=cpu-optimized worker1
+ ~ docker service create --contraints=node.labels.type=cpu-optimized <service_name>
+
+
+DOCKER CONFIGS
+===============
+ ~ docker config create nginx-conf /tmp/nginx.conf
+ ~ docker service create --replicas=4 --config nginx-conf nginx
+ ~ docker service create --replicas=4 --config src=nginx-conf,target="/etc/nginx/nginx.conf" nginx
+ ~ docker service update --config-rm ngin-conf nginx
+ ~ docker config rm nginx-conf
+ ~ docker service update --config-rm nginx-conf --config-add nginx-conf-new nginx
+
+Autoloack key
+============================
+SWMKEY-1-1R7PV9mQ/BwOlqjb6xTtUK+IXp9h/hXfwDdtoQkusMU

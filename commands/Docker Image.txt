@@ -1,0 +1,83 @@
+SEARCH DOCKER IMAGES
+====================
+~ docker search httpd
+~ docker serach httpd --limit 2
+~ docker serach httpd --limit=2
+~ docker search --filter stars=10 httpd 
+~ docker search --filter is-official=true httpd
+~ docker search --filter is-official=true --filter stars=10 httpd
+
+
+PULL DOCKER IMAGE
+=================
+~ docker image pull httpd
+
+ 
+LIST DOCKER PULLED IMAGES
+=========================
+~ docker images
+~ docker image ls
+~ docker image list
+~ docker images --no-trunc  (List the full length image IDs)
+
+
+LOGIN PUBLIC / PRIVATE DOCKER REGISTRY
+======================================
+~ docker login
+~ docker login docker.io
+~ docker login gcr.io
+
+
+PUSH DOCKER IMAGE
+=================
+~ sudo docker tag old_iamage_name new_image_name        (repo_name/image_name)
+~ docker push iamge_name
+
+
+REMOVE DOCKER IMAGE
+===================
+~ docker rmi image_name
+~ docker image prune         (only removes dangling images)
+~ docker image prune -a      (removes all dangling as well as unused images)
+  Note: An image can not be removed if a container is dependent on it. To remove image all containers must be removed and deleted first.
+
+
+INSPECT DOCKER IMAGE
+====================
+~ docker image history <image_name>
+~ docker image inspect <image_name>
+
+
+SAVE AND LOAD DOCKER IMAGE
+==========================
+~ docker image save alpine:latest -o alpine.tar
+~ docker image load -i alpine.tar
+
+
+EXPORT CONTAINER AND IMPORT AS DOCKER IMAGE
+===========================================
+~ docker export <container_id or container_name> -o testcontainer.tar
+~ docker image import testcontainer.tar newimage:latest
+
+
+
+=====================================================================================================
+                                  BUILDING AN CUSTOM DOCKER IMAGE
+=====================================================================================================
+
+BUILD DOCKER IMAGE FROM DOCKER FILE
+===================================
+~ docker build –t <tag_name> dockerfile
+~ docker build –t <tag_name> <git_repo_name>
+~ docker build –t <tag_name> .
+~ docker build /tmp/docker -t webapp
+
+DISABLE CACHE WJILE BUILD IMAGE
+===============================
+~ docker build --no-cache -t <tag_name> dockerfile
+
+
+COMMIT CONTAINER AS IMAGE
+=========================
+
+~ docker commit <container_id or container_name> <new_image_tag_name>

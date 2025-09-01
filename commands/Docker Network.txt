@@ -1,0 +1,55 @@
+CREATE DOCKER NETWORK
+=====================
+ ~ docker network create --driver <driver_name> <name>
+ ~ docker network create -d bridge barbie
+ ~ docker network create <network_name>
+ 
+
+LIST DOCKER NETWORKS
+====================
+ ~ docker network ls
+ ~ docker network inspect <network_name>
+
+ 
+CREATE CONTAINER WITH DOCKER HOST NETWORK
+=========================================
+ ~ docker run -it -d --network host --name MyCon nginx
+
+
+CREATE CONTAINER WITH DOCKER NONE NETWORK
+=========================================
+ ~ docker run -it -d --name mynone --network none nginx
+
+
+CONNECT DOCKER NETWORK TO RUNNING DOCKER CONTAINER
+==================================================
+ ~ docker network connect <network_name> <container_name>
+ ~ docker network disconnect <network_name> <container_name>
+
+
+REMOVE DOCKER NETWORK
+=====================
+ ~ docker network rm <network_name>
+ ~ docker network prune
+ 
+DOCKER OVERLAY NETWORK
+======================
+ ~ docker swarm init
+ ~ docker node ls
+ ~ docker swarm join-token worker
+ ~ docker swarm join-token manager
+ ~ docker swarm leave
+ 
+ ~ docker network create --driver overlay fun-net
+ ~ docker network create --driver overlay --subnet 192.168.0.0/24 my-cust-net
+ ~ docker network create --driver overlay --attachable my-cust-net
+ ~ docker network create --driver overlay --opt encrypted my-cust-net
+ 
+ ~ docker service create --name fun-service --network fun-net --replicas 3 nginx
+ ~ docker service create --name fun-service --replicas 3 -p 80:80 httpd
+
+
+ ~ apt update && apt install iputils-ping -y
+ 
+
+ 

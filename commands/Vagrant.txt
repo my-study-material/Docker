@@ -1,0 +1,77 @@
+Environment variable
+=======================
+VBOX_MSI_INSTALL_PATH                 C:\Program Files\Oracle\VirtualBox\
+
+System variables path
+=======================
+
+C:\HashiCorp\Vagrant\bin
+
+
+https://developer.hashicorp.com/vagrant/downloads
+https://github.com/kodekloudhub/certified-kubernetes-administrator-course
+
+For Windows 10
+======================
+~ Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
+
+For Windows 11
+======================
+~ bcdedit /set hypervisorlaunchtype off
+
+VisualStudio
+============
+https://open-vsx.org/
+https://www.google.com/search?q=XHR+failed%3A+Error%3A+XHR+failed&rlz=1C1CHBF_enIN1042IN1042&oq=XHR+failed%3A+Error%3A+XHR+failed&aqs=chrome..69i57.245j0j7&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:f86fc103,vid:FXujPd3nZh4,st:0
+
+
+cd E:\GIT\certified-kubernetes-administrator-course
+
+~ vagrant init
+
+~ vagrant status
+
+~ vagrant up kubemaster
+
+~ vagrant halt kubemaster
+
+~ vagrant status kubemaster
+
+~ vagrant ssh kubemaster
+
+~ exit
+
+
+
+===========================================
+DockerCE
+===========================================
+
+Master Node     --  kubemaster
+Worker Node 1   --  kubenode01
+Worker Node 2   --  kubenode02
+
+
+=============================================
+DockerEE
+=============================================
+
+Master Node      --  kubenode03
+Worker Node 1    --  kubenode04
+Worker Node 2    --  kubenode05
+
+
+==============================================
+Kubernetes
+==============================================
+
+Kubemaster   --  kubenode06  --  192.168.56.8
+kubeNode1    --  kubenode07  --  192.168.56.9
+KubeNode2    --  kubenode08  --  192.168.56.10
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+DOCKER VOLUME
+=============
+ ~ docker volume create <name>
+ ~ docker volume ls
+ ~ docker volume inspect <volume_name>
+ ~ docker volume rm <name>
+ ~ docker volume prune
+
+MOUNT DOCKER VOLUME
+====================
+ ~ docker run -it -d --name ConA --mount source=batman,target=/apps nginx
+ ~ docker run -it -d --name ConB --volume flash:/apps nginx
+ ~ docker run -it -d --name ConB -v flash:/apps nginx
+ ~ docker run -it -d --name ConC --mount source=supermanRO,target=/apps,readonly nginx
+ ~ docker run -it -d --name ConC --mount source=supermanRO,target=/apps,ro nginx
+ ~ docker run -it -d --name ConB --volume flash:/apps:ro nginx
+ ~ docker run -it -d --name ConB -v flash:/apps:ro nginx
+
+ 
+BIND MOUNT
+==========
+ ~ docker run -it -d --name ConD --mount type=bind,source=$(pwd)/fun,target=/apps nginx
+ ~ docker run -it -d --name ConD --mount type=bind,source=$(pwd)/fun,target=/apps,readonly nginx
+ 
+
+tmpfs MOUNT
+===========
+ ~ docker run -it -d --name ConTemp --mount type=tmpfs,target=/apps nginx
+ ~ docker run -it -d --name ConTemp --tmpfs/apps nginx
+ 
+ 
+ 
+ ~ apt update && apt install nano

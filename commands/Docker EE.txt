@@ -1,0 +1,23 @@
+DOCKER ENTERPRISE EDITION / MIRANTIS CONTAINER RUNTIME (MCR)
+=========================   ================================
+
+
+
+
+
+
+
+
+
+
+DOCKER UNIVERSONAL CONTROL PLANE / MIRANTIS KUBERNETIES ENGINE
+================================   ===========================
+
+
+
+
+
+
+
+DOCKER TRUSTED REGISTRY / MIRATIS SECURE REGISTRY
+=======================   =======================

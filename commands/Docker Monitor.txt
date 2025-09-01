@@ -1,0 +1,6 @@
+DOCKER MONITORING
+-----------------
+
+ ~ https://github.com/remi-code/swarmprom
+ 
+ ~ docker stack deploy -c docker-compose.yml monitorcon

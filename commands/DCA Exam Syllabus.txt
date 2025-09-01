@@ -1,0 +1,49 @@
+DCA EXAM Syllabus
+=================
+
+Orchestration (25% of the Exam)
+Image Creation, Management, and Registry (20% of the Exam)
+Installation and Configuration (15% of the Exam)
+Networking (15% of the Exam)
+Security (15% of the Exam)
+Storage and Volumes (10% of the Exam)
+
+
+Docker Topics
+=============
+
+1. Introduction
+2. Issues Before Containerization
+3. What is a Container?
+4. Container vs VM
+5. Why do we need containers?
+6. What is Docker and why docker?
+7. Docker Installation and Setup
+8. Docker Environment
+9. Docker Images - Brief
+10. Docker Common Commands
+11. Docker Objects
+12. Docker Registry and How To Use DockerHub
+13. Docker Compose and Docker Swarm - Brief
+14. Docker Architecture
+15. Docker File
+16. Docker File Demo
+17. Docker Best practices
+18. Docker Image
+19. Docker Instruction Best Practices
+20. Implementing Docker File Best Practices
+21. Docker Storage
+22. Docker Volume
+23. Bind Mount
+24. Tmpfs Mount
+25. Storage Drivers
+26. Docker Networks
+27. Bridge Network
+28. Host Network
+29. Overlay Network
+30. None Network
+31. Docker Compose
+32. Docker Swarm
+33. AWS ECR
+34. AWS ECS
+35. Monitoring in Docker
