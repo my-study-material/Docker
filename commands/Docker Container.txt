@@ -24,7 +24,7 @@ LIST ALL CONTAINERS RUNNING OR STOPPED OR EXITED
 LIST DOCKER CONTAINER LATEST CREATED
 ===================================
 ~ docker container ls -l
-~ docker contaoner ls -al
+~ docker container ls -al
 
 
 DISPLAY SHORT CONTAINER ID
@@ -58,9 +58,9 @@ REMOVE OR TERMINATE CONTAINER
 ~ docker container prune (remove all containers which are not running)
 
 
-RUN CONTAINER IN DETTACHED MODE AND THEN ATTACH AGAIN
+RUN CONTAINER IN DETACHED MODE AND THEN ATTACH AGAIN
 ======================================================
-~ docker container run -it -d --name mycontainer ubuntu
+~ docker container run -it -d --name my-container ubuntu
 ~ docker container attach <container_id OR container_name>
 
 
@@ -69,7 +69,7 @@ INSPECT CONTAINER
 ~ docker container inspect <container_id OR container_name>
 
 
-SEE CONTAINERS STATICTICS
+SEE CONTAINERS STATISTICS
 =========================
 ~ docker container stats
 ~ docker container top <container_id OR container_name>
@@ -82,7 +82,7 @@ SEE CONTAINERS STATICTICS
 SET HOSTNAME FOR CONTAINER
 ==========================
 Default short container id would be the hostname of container but if you want to set custom hostname then use below command.
-~ docker container run -it -d --name=mycontainer --hostname=webapp httpd
+~ docker container run -it -d --name=my-container --hostname=web-app httpd
 
 
 CONTAINER RESTART POLICY
@@ -105,7 +105,7 @@ FILE OR DIRECTORY COPY FROM HOST TO CONTAINER AND FROM CONTAINER TO HOST
 
 
 
-~ docker container run -itd --name=mycontainer --rm ubuntu   
+~ docker container run -itd --name=my-container --rm ubuntu   
 (This is will create container but gets terminated when it stop using docker container stop command)
 
 
