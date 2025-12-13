@@ -1,8 +1,8 @@
 SEARCH DOCKER IMAGES
 ====================
 ~ docker search httpd
-~ docker serach httpd --limit 2
-~ docker serach httpd --limit=2
+~ docker search httpd --limit 2
+~ docker search httpd --limit=2
 ~ docker search --filter stars=10 httpd 
 ~ docker search --filter is-official=true httpd
 ~ docker search --filter is-official=true --filter stars=10 httpd

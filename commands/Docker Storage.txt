@@ -23,11 +23,12 @@ BIND MOUNT
  ~ docker run -it -d --name ConD --mount type=bind,source=$(pwd)/fun,target=/apps,readonly nginx
  
 
-tmpfs MOUNT
+TMPFS MOUNT
 ===========
  ~ docker run -it -d --name ConTemp --mount type=tmpfs,target=/apps nginx
  ~ docker run -it -d --name ConTemp --tmpfs/apps nginx
  
  
- 
+ INSTALL NANO EDITOR IN CONTAINER
+ =================================
  ~ apt update && apt install nano

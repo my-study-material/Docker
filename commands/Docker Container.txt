@@ -103,10 +103,8 @@ FILE OR DIRECTORY COPY FROM HOST TO CONTAINER AND FROM CONTAINER TO HOST
 
 
 
-
-
-~ docker container run -itd --name=my-container --rm ubuntu   
-(This is will create container but gets terminated when it stop using docker container stop command)
+~ docker container run -it -d --name=my-container --rm ubuntu   
+(This will create container, but gets terminated when it stopped, using docker container stop command)
 
 
 ~ docker container run -d --log-driver json-file nginx

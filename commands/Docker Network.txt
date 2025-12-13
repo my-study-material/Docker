@@ -49,8 +49,13 @@ DOCKER OVERLAY NETWORK
  ~ docker service create --name fun-service --replicas 3 -p 80:80 httpd
 
 
-
+GET CONTAINER IP ADDRESS
+=========================
 ~ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' conD
+
+
+INSTALL PING IN CONTAINER
+==========================
 ~ apt update && apt install iputils-ping -y
  
 
