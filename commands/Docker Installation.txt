@@ -28,11 +28,6 @@ Method 2:
  ~ sudo apt-get install docker-ce -y
 
 
-Docker Hub Token
-================
-
-dckr_pat_gW1LT4l4hlWcv6S2C7phD-O7mvc
-
  
 
 
