@@ -1,6 +1,6 @@
 # Docker Study Repository – DCA Preparation
 
-📘 Overview
+## 📘 Overview
 
 This repository has been created and maintained by a Mirantis Certified Docker Associate. It is designed for students and professionals who want to:
 
@@ -10,7 +10,7 @@ Prepare for the Docker Certified Associate (DCA) exam.
 
 Practice with real-world examples and hands-on exercises.
 
-🎯 What You’ll Find Here
+## 🎯 What You’ll Find Here
 
 DCA Exam Syllabus – Detailed breakdown of topics covered in the certification.
 
@@ -22,7 +22,7 @@ Practical Files – Sample Dockerfile and docker-compose.yml files for hands-on 
 
 AWS Cloud Integration – Examples and notes on using Docker with AWS services.
 
-🛠️ Technologies Covered
+## 🛠️ Technologies Covered
 
 Docker (core concepts, images, containers, networking, storage)
 
@@ -32,7 +32,7 @@ Groovy & Grails, Python, Android, AngularJS (supporting technologies explored du
 
 AWS Cloud Platform – Exposure to services like Lambda, S3, Athena
 
-🚀 How to Use
+## 🚀 How to Use
 
 Clone the repository:
 
@@ -44,7 +44,7 @@ Use the provided Dockerfiles and Compose files to run exercises locally.
 
 Follow the syllabus guide to track your DCA exam preparation.
 
-📌 Target Audience
+## 📌 Target Audience
 
 Students beginning their Docker journey.
 
@@ -52,10 +52,10 @@ Professionals preparing for the Docker Certified Associate (DCA) exam.
 
 Developers interested in containerization and cloud-native application deployment.
 
-🤝 Contributions
+## 🤝 Contributions
 
 Contributions, suggestions, and improvements are welcome! Please open an issue or submit a pull request if you’d like to add or refine content.
 
-📜 License
+## 📜 License
 
 This repository is shared for educational purposes. Please check the LICENSE file for details.
