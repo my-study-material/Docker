@@ -74,4 +74,3 @@ DOCKER CONFIGS
 
 Autoloack key
 ============================
-SWMKEY-1-1R7PV9mQ/BwOlqjb6xTtUK+IXp9h/hXfwDdtoQkusMU
