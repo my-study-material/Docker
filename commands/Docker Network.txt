@@ -51,12 +51,9 @@ DOCKER OVERLAY NETWORK
 
 GET CONTAINER IP ADDRESS
 =========================
-~ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' conD
+~ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' conB
 
 
 INSTALL PING IN CONTAINER
 ==========================
 ~ apt update && apt install iputils-ping -y
- 
-
- 
